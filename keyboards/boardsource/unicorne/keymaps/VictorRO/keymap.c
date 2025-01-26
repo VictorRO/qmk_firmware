@@ -17,30 +17,30 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
-    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
-    KC_LCTL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
-    KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_ESC,
-                                  KC_LGUI,  MO(1),    KC_SPC,       KC_ENT,   MO(2),    KC_RALT
+    KC_ESC,   KC_Q,     KC_W,         KC_E,         KC_R,         KC_T,         KC_Y,         KC_U,         KC_I,         KC_O,     KC_P,     KC_BSPC,
+    KC_TAB,   KC_A,     LCTL_T(KC_S), LALT_T(KC_D), LGUI_T(KC_F), KC_G,         RGUI_T(KC_H), RALT_T(KC_J), RCTL_T(KC_K), KC_L,     KC_SCLN,  KC_ENT,
+    KC_QUES,  KC_Z,     KC_X,         KC_C,         KC_V,         KC_B,         KC_N,         KC_M,         KC_COMM,      KC_DOT,   KC_SLSH,  KC_EXLM,
+                                      KC_LGUI,      XXXXXXX,      KC_SPC,       KC_SPC,       TO(1),        KC_RALT
   ),
 
   [1] = LAYOUT_split_3x6_3(
-    _______,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,         KC_6,     KC_7,     KC_8      KC_9,     KC_0,     _______,
-    _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,      _______,  _______,  _______,  _______,  _______,  _______,
-                                  _______,  _______,  _______,      _______,  _______,  _______
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_KB_VOLUME_DOWN,  KC_KB_VOLUME_UP, KC_KB_MUTE,      XXXXXXX,  LGUI(KC_C), KC_UP,    LGUI(KC_V), XXXXXXX,  _______,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,            KC_MSTP,         KC_MNXT,         XXXXXXX,  KC_LEFT,    KC_DOWN,  KC_RGHT,    XXXXXXX,  _______,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,         XXXXXXX,         XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,    XXXXXXX,  TO(3),
+                                  _______,  TO(0),    _______,      _______,  TO(2),  _______
   ),
 
   [2] = LAYOUT_split_3x6_3(
-    QK_BOOT,  _______,  _______,  _______,  _______,  _______,      RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,  _______,
-    EE_CLR,   _______,  _______,  _______,  _______,  _______,      RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,      _______,  _______,  _______,  _______,  _______,  _______,
-                                  _______,  _______,  _______,      _______,  _______,  _______
+    _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  KC_BSPC,
+    _______,  KC_GRV,   KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  KC_RSFT,  KC_RGUI,  KC_RALT,  KC_RCTL,  KC_ENT,
+    _______,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_EQL,   KC_PLUS,  KC_BSLS,  KC_EXLM,
+                                  _______,  TO(0),    _______,      _______,  TO(3),    _______
   ),
 
-    [3] = LAYOUT_split_3x6_3(
-    QK_BOOT,  _______,  _______,  _______,  _______,  _______,      RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,  _______,
-    EE_CLR,   _______,  _______,  _______,  _______,  _______,      RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,      _______,  _______,  _______,  _______,  _______,  _______,
-                                  _______,  _______,  _______,      _______,  _______,  _______
+  [3] = LAYOUT_split_3x6_3(
+    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      KC_COMM,  KC_P7,    KC_P8,    KC_P9,    KC_PLUS,  KC_BSPC,
+    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_DOT,   KC_P4,    KC_P5,    KC_P6,    KC_MINS,  KX_ENT,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_EQL,       KC_P0,    KC_P1,    KC_P2,    KC_P3,    KC_SLSH,  KC_ASTR,
+                                  _______,  TO(0),    _______,      _______,  TO(1),    _______
     )
 };

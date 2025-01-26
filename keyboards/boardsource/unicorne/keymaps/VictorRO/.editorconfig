@@ -71,8 +71,3 @@ charset = utf-8
 [*.md]
 # Double spaces at the end of a line indicate a forced line break.
 trim_trailing_whitespace = false
-
-[*.sql]
-# Mostly, because rake db:structure:dump does not add a newline to
-# db/structure.sql, and we want to avoid bogus diffs on editing that file.
-insert_final_newline = false
