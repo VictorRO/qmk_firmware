@@ -17,10 +17,10 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
-    KC_ESC,   KC_Q,     KC_W,         KC_E,         KC_R,         KC_T,         KC_Y,         KC_U,         KC_I,         KC_O,     KC_P,     KC_BSPC,
-    KC_TAB,   KC_A,     LCTL_T(KC_S), LALT_T(KC_D), LGUI_T(KC_F), KC_G,         RGUI_T(KC_H), RALT_T(KC_J), RCTL_T(KC_K), KC_L,     KC_SCLN,  KC_ENT,
-    KC_QUES,  KC_Z,     KC_X,         KC_C,         KC_V,         KC_B,         KC_N,         KC_M,         KC_COMM,      KC_DOT,   KC_SLSH,  KC_EXLM,
-                                      C(KC_B),      MO(1),        KC_LSFT,      KC_SPC,       MO(2),        KC_RALT
+    KC_ESC,   KC_Q,     KC_W,         KC_E,         KC_R,         KC_T,           KC_Y,     KC_U,         KC_I,         KC_O,           KC_P,     KC_BSPC,
+    KC_TAB,   KC_A,     LCTL_T(KC_S), LALT_T(KC_D), LGUI_T(KC_F), KC_G,           KC_H,     RGUI_T(KC_J), RALT_T(KC_K), RCTL_T(KC_L),   KC_SCLN,  KC_ENT,
+    KC_COLN,  KC_Z,     KC_X,         KC_C,         KC_V,         KC_B,           KC_N,     KC_M,         KC_COMM,      KC_DOT,         KC_SLSH,  KC_GRV,
+                                      C(KC_B),      MO(1),        KC_LSFT,        KC_SPC,   MO(2),        KC_RALT
   ),
 
   [1] = LAYOUT_split_3x6_3(
@@ -32,8 +32,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
     _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  KC_BSPC,
-    _______,  KC_GRV,   KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  KC_RSFT,  KC_RGUI,  KC_RALT,  KC_RCTL,  KC_ENT,
-    _______,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_EQL,   KC_PLUS,  KC_BSLS,  KC_EXLM,
+    _______,  KC_QUES,  KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  KC_DQT,   KC_EQL,   KC_PLUS,  KC_BSLS,  KC_ENT,
+    _______,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_COMM,  KC_DOT,   KC_SLSH,  KC_GRV,
                                   _______,  MO(3),    _______,      _______,  _______,  _______
   ),
 
