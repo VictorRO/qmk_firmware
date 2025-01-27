@@ -24,9 +24,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_KB_VOLUME_DOWN,  KC_KB_VOLUME_UP, KC_KB_MUTE,      XXXXXXX,  LGUI(KC_C), KC_UP,    LGUI(KC_V), XXXXXXX,  _______,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,            KC_MSTP,         KC_MNXT,         XXXXXXX,  KC_LEFT,    KC_DOWN,  KC_RGHT,    XXXXXXX,  _______,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,         XXXXXXX,         XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,    XXXXXXX,  TO(3),
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_KB_VOLUME_DOWN,  KC_KB_VOLUME_UP, KC_KB_MUTE,      XXXXXXX,  LGUI(KC_C), KC_UP,    LGUI(KC_V), XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,            KC_MSTP,         KC_MNXT,         XXXXXXX,  KC_LEFT,    KC_DOWN,  KC_RGHT,    XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,         XXXXXXX,         XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,
                                   _______,  _______,  _______,         _______,         MO(3),    _______
   ),
 
