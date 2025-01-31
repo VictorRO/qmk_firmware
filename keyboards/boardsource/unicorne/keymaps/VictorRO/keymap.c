@@ -1,6 +1,6 @@
 /*
-Copyright 2024 jack (@waffle87)
-SPDX-License-Identifier: GPL-2.0-or-later
+copyright 2024 jack (@waffle87)
+spdx-license-identifier: gpl-2.0-or-later
 */
 
 #include QMK_KEYBOARD_H
@@ -8,6 +8,21 @@ SPDX-License-Identifier: GPL-2.0-or-later
 #    include "keymap.h"
 #endif
 
+// Left-hand home row mods
+#define HOME_A LCTL_T(KC_A)
+#define HOME_S LALT_T(KC_S)
+#define HOME_D LGUI_T(KC_D)
+#define HOME_F LSFT_T(KC_F)
+
+// Right-hand home row mods
+#define HOME_J RSFT_T(KC_J)
+#define HOME_K RGUI_T(KC_K)
+#define HOME_L LALT_T(KC_L)
+#define HOME_QUOT RCTL_T(KC_QUOT)
+
+// copy and paste
+#define HOME_CPY LGUI(KC_C)
+#define HOME_PST LGUI(KC_V)
 
 /* THIS FILE WAS GENERATED!
  *
@@ -17,17 +32,17 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
-    KC_ESC,   KC_Q,           KC_W,         KC_E,         KC_R,         KC_T,           KC_Y,     KC_U,         KC_I,         KC_O,           KC_P,             KC_BSPC,
-    KC_TAB,   LCTL_T(KC_A),   LALT_T(KC_S), LGUI_T(KC_D), LSFT_T(KC_F), KC_G,           KC_H,     RSFT_T(KC_J), RGUI_T(KC_K), RALT_T(KC_L),   RCTL_T(KC_QUOT),  KC_ENT,
-    KC_COLN,  KC_Z,           KC_X,         KC_C,         KC_V,         KC_B,           KC_N,     KC_M,         KC_COMM,      KC_DOT,         KC_SLSH,          KC_GRV,
-                                            C(KC_B),      MO(1),        KC_LSFT,        KC_SPC,   MO(2),        KC_DEL
+    KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,       KC_BSPC,
+    KC_TAB,   HOME_A,   HOME_S,   HOME_D,   HOME_F,   KC_G,         KC_H,     HOME_J,   HOME_K,   HOME_L,   HOME_QUOT,  KC_ENT,
+    KC_COLN,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,    KC_GRV,
+                                  C(KC_B),  MO(1),    KC_LSFT,      KC_SPC,   MO(2),    KC_DEL
   ),
 
   [1] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_KB_VOLUME_DOWN,  KC_KB_VOLUME_UP, KC_KB_MUTE,      XXXXXXX,  LGUI(KC_C), KC_UP,    LGUI(KC_V), XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,            KC_MPLY,         KC_MNXT,         XXXXXXX,  KC_LEFT,    KC_DOWN,  KC_RGHT,    XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,            XXXXXXX,         XXXXXXX,         XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,    XXXXXXX,  XXXXXXX,
-                                  _______,  _______,  _______,         _______,         MO(3),    _______
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_VOLU,  KC_VOLD,  KC_MUTE,      XXXXXXX,  HOME_CPY, KC_UP,    HOME_PST, XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,      XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_RGHT,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+                                  _______,  _______,  _______,      _______,  MO(3),    _______
   ),
 
   [2] = LAYOUT_split_3x6_3(
