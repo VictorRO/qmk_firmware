@@ -3,6 +3,8 @@ copyright 2024 jack (@waffle87)
 spdx-license-identifier: gpl-2.0-or-later
 */
 
+#pragma once
+
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
 
