@@ -19,7 +19,7 @@ uint16_t last_keycode;
 // Right-hand home row mods
 #define HOME_J RSFT_T(KC_J)
 #define HOME_K RGUI_T(KC_K)
-#define HOME_L LALT_T(KC_L)
+#define HOME_L LALT_T(KC_L) // awkward things might happen with RALT instead (this can be AltGr!)
 #define HOME_QUOT RCTL_T(KC_QUOT)
 
 // copy and paste
@@ -28,7 +28,7 @@ uint16_t last_keycode;
 
 #ifdef TAP_DANCE_ENABLE
 enum {
-    DOT_TD,
+  DOT_TD,
 };
 
 #define TD_DOT TD(DOT_TD)
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_VOLU,  KC_VOLD,  KC_MUTE,      XXXXXXX,  HOME_CPY, KC_UP,    HOME_PST, XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_VOLD,  KC_VOLU,  KC_MUTE,      XXXXXXX,  HOME_CPY, KC_UP,    HOME_PST, XXXXXXX,  XXXXXXX,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,      XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_RGHT,  XXXXXXX,  XXXXXXX,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   _______,  _______,  _______,      _______,  MO(3),    _______
@@ -65,6 +65,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   _______,  _______,  _______,      _______,  _______,  _______
     )
 };
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case LCTL_T(KC_A):
+      return TAPPING_TERM + 50;
+    default:
+      return TAPPING_TERM;
+  }
+}
+
 
 #ifdef TAP_DANCE_ENABLE
   // Due to keymap introspection, the old `SRC += tapdance.c` technique in rules.mk no longer works
