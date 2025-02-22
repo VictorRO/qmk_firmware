@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
     KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  KC_ENT,
-    KC_COLN,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_GRV,
+    XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   C(KC_B),  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
   ),
 
@@ -74,16 +74,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [SYM] = LAYOUT_split_3x6_3(
-    _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  KC_BSPC,
-    _______,  KC_QUES,  KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CTRL,  KC_ENT,
-    _______,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_COMM,  KC_DOT,   KC_SLSH,  KC_GRV,
+    XXXXXXX,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  XXXXXXX,
+    XXXXXXX,  KC_GRV,   KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CTRL,  XXXXXXX,
+    XXXXXXX,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_EQL,   KC_PLUS,  KC_BSLS,  XXXXXXX,
                                   _______,  _______,  _______,      _______,  _______,  _______
   ),
 
   [NUM] = LAYOUT_split_3x6_3(
-    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      KC_COMM,  KC_P7,    KC_P8,    KC_P9,    KC_PLUS,  KC_BSPC,
-    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      KC_DOT,   KC_P4,    KC_P5,    KC_P6,    KC_MINS,  KC_ENT,
-    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_P0,    KC_P1,    KC_P2,    KC_P3,    KC_SLSH,  KC_ASTR,
+    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      XXXXXXX,  KC_P7,    KC_P8,    KC_P9,    XXXXXXX,  XXXXXXX,
+    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      XXXXXXX,  KC_P4,    KC_P5,    KC_P6,    XXXXXXX,  XXXXXXX,
+    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_P0,    KC_P1,    KC_P2,    KC_P3,    XXXXXXX,  XXXXXXX,
                                   _______,  _______,  _______,      _______,  _______,  _______
     )
 };
