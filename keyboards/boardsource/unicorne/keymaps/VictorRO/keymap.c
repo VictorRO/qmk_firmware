@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [SYM] = LAYOUT_split_3x6_3(
     _______,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  KC_BSPC,
-    _______,  KC_QUES,  KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CRTL,  KC_ENT,
+    _______,  KC_QUES,  KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CTRL,  KC_ENT,
     _______,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_COMM,  KC_DOT,   KC_SLSH,  KC_GRV,
                                   _______,  _______,  _______,      _______,  _______,  _______
   ),
@@ -168,3 +168,5 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   // Due to keymap introspection, the old `SRC += tapdance.c` technique in rules.mk no longer works
   #include "tapdance.c"
 #endif
+#include "swapper.c"
+#include "oneshot.c"
