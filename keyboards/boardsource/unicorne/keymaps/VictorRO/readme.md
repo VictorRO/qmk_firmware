@@ -1,7 +1,7 @@
-This is a 42 keymap layout with home row mods and mod-tap enabled.
-
+This is a 42 keymap layout with home row mods no mod-tap
 ```
-❯ keymapviz keyboards/boardsource/unicorne/keymaps/VictorRO/keymap.c -k crkbd -t fancy -c keyboards/boardsource/unicorne/keymaps/VictorRO/viz/keymapviz.ini
+qmk c2json -kb boardsource/unicorne -km VictorRO --no-cpp | keymap parse -c 12 -q - >keyboards/boardsource/unicorne/keymaps/VictorRO/sweep_keymap.yaml
+keymap draw keyboards/boardsource/unicorne/keymaps/VictorRO/sweep_keymap.yaml > keyboards/boardsource/unicorne/keymaps/VictorRO/viz/sweep_keymap.unicorn.svg
 ```
 
 ![Layout](viz/sweep_keymap.unicorn.svg)
