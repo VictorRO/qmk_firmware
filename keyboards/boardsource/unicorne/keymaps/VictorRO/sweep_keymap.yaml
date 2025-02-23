@@ -1,0 +1,37 @@
+layout: {qmk_keyboard: boardsource/unicorne, layout_name: LAYOUT_split_3x6_3}
+layers:
+  L0:
+  - [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC]
+  - [TAB, A, S, D, F, G, H, J, K, L, '''', ENT]
+  - ['', Z, X, C, V, B, N, M, ',', ., /, '']
+  - [LCTL, LA NAV, LSFT, TD SPC, LA SYM, DEL]
+  L1:
+  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PGDN, PGUP, END, '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, UP, DOWN, RGHT, '', '']
+  - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L2:
+  - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
+  - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
+  - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, '']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L3:
+  - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', '', '4', '5', '6', '', '']
+  - [EE CLR, RM VALD, RM HUED, RM SATD, RM PREV, CK TOGG, '0', '1', '2', '3', '', '']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
