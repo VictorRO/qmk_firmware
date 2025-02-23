@@ -11,22 +11,6 @@ spdx-license-identifier: gpl-2.0-or-later
 
 uint16_t last_keycode;
 
-// Left-hand home row mods
-#define HOME_A LCTL_T(KC_A)
-#define HOME_S LALT_T(KC_S)
-#define HOME_D LGUI_T(KC_D)
-#define HOME_F LSFT_T(KC_F)
-
-// Right-hand home row mods
-#define HOME_J RSFT_T(KC_J)
-#define HOME_K RGUI_T(KC_K)
-#define HOME_L LALT_T(KC_L) // awkward things might happen with RALT instead (this can be AltGr!)
-#define HOME_QUOT RCTL_T(KC_QUOT)
-
-// copy and paste
-#define HOME_CPY LGUI(KC_C)
-#define HOME_PST LGUI(KC_V)
-
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
 
@@ -58,8 +42,6 @@ enum keycodes {
   SW_LANG, // Switch to next input language (ctl-spc)
 };
 
-// https://caksoylar.github.io/keymap-drawer?keymap_yaml=H4sIAAAAAAAC_6WTW1ebUBCF3_0Vp8feldCa1rbpZTUQNFYMEYiXeqFEjoEVbiUny6q1v73sQc2l6ktfvlnMDDObfQ6LLPeLkQiYnwZMhiJl8kz4wzJxWmQJC6XMRw1VHUQyHPdrJ1mimtZu17Y2NfUiGSonWXoaDZQLkSoraj_O-mriR6lapctQpCIahV5Zrw3FeeLnC7F_no1lY4Gxn8nQK5P9zC-CBqNer8ikL0VQVqs-L_UT0WBmc9_qud4ojyPp1X-tenXMEcUIc7SmYyAyprADbjg6X2Z8G9gFDMAGXGAf6AEbgAV0Ac3p8qPbMW5TQ7IJOEALWAPWgTbwDdgETOAZreu4kzHpOI7L3HcU9gDStkPrgA6wBSwDNUAtgfcmWo6p19gj_U57rYpdmuXs0-stw6StZZPRaTVm90-T71imwqu4RNt7rsHnenr5XGZGz3WTbrv01U2T9OhbrSl5M-NMcSpJZHaW0mFEg1DyB2bPvN21DTKsW14C8qwy4t_OewVzXRbxEky8lOd5eZ1CEQdXEBtGlTIn90_EtJ0iJjvLR80y5-zkj9DyFVgEHgNPgGPgKfAS8ICP_G77fqD4B7gEngMHQINPK9OTgEyOq6fyQ-6Z9wn1L8AV8AI4An4DdOSfATr0w0N-r0e3F23enDnzbjzq9LY0w578gLZB_4tm06Z2j4LTpGCvazdxcob8HVLvgQ_8wRsni2kvKmduZM7cmTeovAVW757Itzd1s5KpVDKVSqZyLY-ibm6QFa-A18AKUOf_ec3udPIv_s-LoIoFAAA%3D
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
     KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
@@ -69,9 +51,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [NAV] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  SW_WIN,   KC_VOLD,  KC_VOLU,  KC_MUTE,      XXXXXXX,  XXXXXXX,  KC_UP,    XXXXXXX,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_RGHT,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  SW_LANG,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  SW_WIN,   KC_VOLD,  KC_VOLU,  KC_MUTE,      KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   XXXXXXX,  XXXXXXX,
+    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      KC_LEFT,  KC_UP,    KC_DOWN,  KC_RGHT,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,      QK_REP,   XXXXXXX,  XXXXXXX,  XXXXXXX,  SW_LANG,  XXXXXXX,
                                   _______,  _______,  _______,      _______,  _______,  _______
   ),
 
