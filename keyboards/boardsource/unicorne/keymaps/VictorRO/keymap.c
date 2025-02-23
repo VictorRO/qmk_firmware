@@ -58,12 +58,14 @@ enum keycodes {
   SW_LANG, // Switch to next input language (ctl-spc)
 };
 
+// https://caksoylar.github.io/keymap-drawer?keymap_yaml=H4sIAAAAAAAC_6WTW1ebUBCF3_0Vp8feldCa1rbpZTUQNFYMEYiXeqFEjoEVbiUny6q1v73sQc2l6ktfvlnMDDObfQ6LLPeLkQiYnwZMhiJl8kz4wzJxWmQJC6XMRw1VHUQyHPdrJ1mimtZu17Y2NfUiGSonWXoaDZQLkSoraj_O-mriR6lapctQpCIahV5Zrw3FeeLnC7F_no1lY4Gxn8nQK5P9zC-CBqNer8ikL0VQVqs-L_UT0WBmc9_qud4ojyPp1X-tenXMEcUIc7SmYyAyprADbjg6X2Z8G9gFDMAGXGAf6AEbgAV0Ac3p8qPbMW5TQ7IJOEALWAPWgTbwDdgETOAZreu4kzHpOI7L3HcU9gDStkPrgA6wBSwDNUAtgfcmWo6p19gj_U57rYpdmuXs0-stw6StZZPRaTVm90-T71imwqu4RNt7rsHnenr5XGZGz3WTbrv01U2T9OhbrSl5M-NMcSpJZHaW0mFEg1DyB2bPvN21DTKsW14C8qwy4t_OewVzXRbxEky8lOd5eZ1CEQdXEBtGlTIn90_EtJ0iJjvLR80y5-zkj9DyFVgEHgNPgGPgKfAS8ICP_G77fqD4B7gEngMHQINPK9OTgEyOq6fyQ-6Z9wn1L8AV8AI4An4DdOSfATr0w0N-r0e3F23enDnzbjzq9LY0w578gLZB_4tm06Z2j4LTpGCvazdxcob8HVLvgQ_8wRsni2kvKmduZM7cmTeovAVW757Itzd1s5KpVDKVSqZyLY-ibm6QFa-A18AKUOf_ec3udPIv_s-LoIoFAAA%3D
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
     KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  KC_ENT,
     XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
-                                  C(KC_B),  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
+                                  KC_LCTL,  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
   ),
 
   [NAV] = LAYOUT_split_3x6_3(
@@ -81,9 +83,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [NUM] = LAYOUT_split_3x6_3(
-    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      XXXXXXX,  KC_P7,    KC_P8,    KC_P9,    XXXXXXX,  XXXXXXX,
-    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      XXXXXXX,  KC_P4,    KC_P5,    KC_P6,    XXXXXXX,  XXXXXXX,
-    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_P0,    KC_P1,    KC_P2,    KC_P3,    XXXXXXX,  XXXXXXX,
+    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      XXXXXXX,  KC_7,     KC_8,     KC_9,    XXXXXXX,  XXXXXXX,
+    XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      XXXXXXX,  KC_4,     KC_5,     KC_6,    XXXXXXX,  XXXXXXX,
+    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_0,     KC_1,     KC_2,     KC_3,    XXXXXXX,  XXXXXXX,
                                   _______,  _______,  _______,      _______,  _______,  _______
     )
 };
