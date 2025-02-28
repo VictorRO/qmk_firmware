@@ -7,7 +7,7 @@ layers:
   - [CTRL, NAV, SHFT, SPC, SYM, DEL]
   EXTEND:
   - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PG DN, PG UP, END, '', '']
-  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', ←, ↓, ↑, →, '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', ←, ↓, U+E08E, →, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
   - - {t: CTRL, type: trans}
     - {type: held}
