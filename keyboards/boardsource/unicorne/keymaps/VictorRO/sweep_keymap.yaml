@@ -9,29 +9,29 @@ layers:
   - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PGDN, PGUP, END, '', '']
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, DOWN, UP, RGHT, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
-  - - {t: ▽, type: trans}
+  - - {t: LCTL, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: LSFT, type: trans}
+    - {t: TD SPC, type: trans}
     - {t: 'NUM'}
-    - {t: ▽, type: trans}
+    - {t: DEL, type: trans}
   SYMBOLS:
   - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
   - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
   - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, '']
-  - - {t: ▽, type: trans}
+  - - {t: LCTL, type: trans}
     - {t: 'NUM'}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: LSFT, type: trans}
+    - {t: TD SPC, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
+    - {t: DEL, type: trans}
   NUMBER:
   - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', '']
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', '', '4', '5', '6', '', '']
   - [EE CLR, RM VALD, RM HUED, RM SATD, RM PREV, CK TOGG, '0', '1', '2', '3', '', '']
-  - - {t: ▽, type: trans}
+  - - {t: LCTL, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: LSFT, type: trans}
+    - {t: TD SPC, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
+    - {t: DEL, type: trans}
