@@ -10,20 +10,20 @@ layers:
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, DOWN, UP, RGHT, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   SYMBOLS:
   - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
   - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
   - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, '']
   - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   NUMBER:
   - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', '']
