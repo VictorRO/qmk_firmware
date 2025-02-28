@@ -7,7 +7,7 @@ layers:
   - [LCTL, LA NAV, LSFT, TD SPC, LA SYM, DEL]
   L1:
   - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PGDN, PGUP, END, '', '']
-  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, UP, DOWN, RGHT, '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, DOWN, UP, RGHT, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
