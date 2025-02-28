@@ -6,7 +6,7 @@ layers:
   - ['', Z, X, C, V, B, N, M, ',', ., /, '']
   - [CTRL, NAV, SHFT, SPC, SYM, DEL]
   EXTEND:
-  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PGDN, PGUP, END, '', '']
+  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PG DN, PG UP, END, '', '']
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, DOWN, UP, RGHT, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
   - - {t: CTRL, type: trans}
