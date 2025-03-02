@@ -42,6 +42,16 @@ enum keycodes {
   SW_LANG, // Switch to next input language (ctl-spc)
 };
 
+enum combos {
+  JK_CMD
+};
+
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+
+combo_t key_combos[] = {
+  [JK_CMD] = COMBO(jk_combo, OS_CMD),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
     KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,

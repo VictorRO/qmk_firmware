@@ -35,3 +35,5 @@ layers:
     - {t: SPC, type: trans}
     - {type: held}
     - {t: DEL, type: trans}
+combos:
+  - {p: [16, 17], k: "CMD", l: ["BASE"]}
