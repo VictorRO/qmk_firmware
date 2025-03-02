@@ -36,4 +36,4 @@ layers:
     - {type: held}
     - {t: DEL, type: trans}
 combos:
-  - {p: [16, 17], k: "CMD", l: ["BASE"]}
+  - {p: [19, 20], k: "CMD", l: ["BASE"]}
