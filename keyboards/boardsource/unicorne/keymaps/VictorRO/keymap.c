@@ -5,6 +5,8 @@ spdx-license-identifier: gpl-2.0-or-later
 
 #include QMK_KEYBOARD_H
 
+#include "keymap_spanish.h"
+
 #include "keymap.h"
 #include "oneshot.h"
 #include "swapper.h"
@@ -13,6 +15,8 @@ uint16_t last_keycode;
 
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
+
+#define MY_TILD RALT(ES_NTIL)
 
 #ifdef TAP_DANCE_ENABLE
 enum {
@@ -55,8 +59,8 @@ combo_t key_combos[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
     KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
-    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  KC_ENT,
-    XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
+    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     ES_QUOT,  KC_ENT,
+    ES_CCED,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   ES_SLSH,  ES_ACUT,
                                   KC_LCTL,  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
   ),
 
@@ -68,9 +72,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [SYM] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,      KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_UNDS,  KC_SCLN,  XXXXXXX,
-    XXXXXXX,  KC_GRV,   KC_TILD,  KC_LCBR,  KC_LPRN,  KC_LBRC,      KC_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CTRL,  XXXXXXX,
-    XXXXXXX,  KC_LT,    KC_GT,    KC_RCBR,  KC_RPRN,  KC_RBRC,      KC_PIPE,  KC_MINS,  KC_EQL,   KC_PLUS,  KC_BSLS,  XXXXXXX,
+    XXXXXXX,  KC_EXLM,  ES_AT,    ES_HASH,  KC_DLR,   KC_PERC,      ES_DQUO,  ES_AMPR,  ES_ASTR,  ES_UNDS,  ES_SCLN,  ES_NOT,
+    XXXXXXX,  ES_GRV,   MY_TILD,  ES_LCBR,  ES_LPRN,  ES_LBRC,      ES_COLN,  OS_SHFT,  OS_CMD,   OS_ALT,   OS_CTRL,  ES_BULT,
+    XXXXXXX,  ES_LABK,  ES_RABK,  ES_RCBR,  ES_RPRN,  ES_RBRC,      ES_PIPE,  ES_MINS,  ES_EQL,   ES_PLUS,  ES_BSLS,  ES_NTIL,
                                   _______,  _______,  _______,      _______,  _______,  _______
   ),
 
