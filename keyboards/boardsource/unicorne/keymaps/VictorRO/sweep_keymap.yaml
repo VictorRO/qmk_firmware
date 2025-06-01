@@ -1,10 +1,10 @@
 layout: {qmk_keyboard: boardsource/unicorne, layout_name: LAYOUT_split_3x6_3}
 layers:
   BASE:
-  - [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC]
-  - [TAB, A, S, D, F, G, H, J, K, L, '''', ENT]
-  - ['', Z, X, C, V, B, N, M, ',', ., /, '']
-  - [CTRL, NAV, SHFT, SPC, SYM, DEL]
+  - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
+  - [CTRL, A, S, D, F, G, H, J, K, L, '''', ENT]
+  - [Ç, Z, X, C, V, B, N, M, ',', ., /, '´']
+  - [CMD, NAV, SHFT, SPC, SYM, DEL]
   EXTEND:
   - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PG DN, PG UP, END, '', '']
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', ←, ↓, ↑, →, '', '']
@@ -18,7 +18,7 @@ layers:
   SYMBOLS:
   - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
   - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
-  - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, '']
+  - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, Ñ]
   - - {t: CTRL, type: trans}
     - {t: 'NUM'}
     - {t: SHFT, type: trans}
@@ -36,4 +36,5 @@ layers:
     - {type: held}
     - {t: DEL, type: trans}
 combos:
+  - {p: [02, 03], k: "ESC", l: ["BASE"]}
   - {p: [19, 20], k: "CMD", l: ["BASE"]}

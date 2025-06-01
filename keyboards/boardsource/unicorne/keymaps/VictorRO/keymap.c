@@ -47,21 +47,24 @@ enum keycodes {
 };
 
 enum combos {
-  JK_CMD
+  JK_CMD,
+  WE_ESC,
 };
 
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 
 combo_t key_combos[] = {
   [JK_CMD] = COMBO(jk_combo, OS_CMD),
+  [WE_ESC] = COMBO(we_combo, KC_ESC),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BAS] = LAYOUT_split_3x6_3(
-    KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
-    KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     ES_QUOT,  KC_ENT,
+    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
+    KC_LCTL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,         KC_H,     KC_J,     KC_K,     KC_L,     ES_QUOT,  KC_ENT,
     ES_CCED,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,         KC_N,     KC_M,     KC_COMM,  KC_DOT,   ES_SLSH,  ES_ACUT,
-                                  KC_LCTL,  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
+                                  KC_LCMD,  LA_NAV,   KC_LSFT,      TD_SPC,   LA_SYM,   KC_DEL
   ),
 
   [NAV] = LAYOUT_split_3x6_3(
@@ -79,9 +82,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [NUM] = LAYOUT_split_3x6_3(
-    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      XXXXXXX,  KC_7,     KC_8,     KC_9,    XXXXXXX,  XXXXXXX,
+    QK_BOOT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_NEXT,  RM_TOGG,      XXXXXXX,  KC_7,     KC_8,     KC_9,    XXXXXXX,  KC_BRIU,
     XXXXXXX,  OS_CTRL,  OS_ALT,   OS_CMD,   OS_SHFT,  XXXXXXX,      XXXXXXX,  KC_4,     KC_5,     KC_6,    XXXXXXX,  XXXXXXX,
-    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_0,     KC_1,     KC_2,     KC_3,    XXXXXXX,  XXXXXXX,
+    EE_CLR,   RM_VALD,  RM_HUED,  RM_SATD,  RM_PREV,  CK_TOGG,      KC_0,     KC_1,     KC_2,     KC_3,    XXXXXXX,  KC_BRID,
                                   _______,  _______,  _______,      _______,  _______,  _______
     )
 };
