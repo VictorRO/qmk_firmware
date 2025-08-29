@@ -1,0 +1,40 @@
+layout: {qmk_keyboard: boardsource/unicorne, layout_name: LAYOUT_split_3x6_3}
+layers:
+  BASE:
+  - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
+  - [CTRL, A, S, D, F, G, H, J, K, L, '''', ENT]
+  - [Ç, Z, X, C, V, B, N, M, ',', ., /, '´']
+  - [CMD, NAV, SHFT, SPC, SYM, DEL]
+  EXTEND:
+  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PG DN, PG UP, END, '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', ←, ↓, ↑, →, '', '']
+  - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
+  - - {t: CTRL, type: trans}
+    - {type: held}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {t: 'NUM'}
+    - {t: DEL, type: trans}
+  SYMBOLS:
+  - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
+  - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
+  - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, Ñ]
+  - - {t: CTRL, type: trans}
+    - {t: 'NUM'}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {type: held}
+    - {t: DEL, type: trans}
+  NUMBER:
+  - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', '', '4', '5', '6', '', '']
+  - [EE CLR, RM VALD, RM HUED, RM SATD, RM PREV, CK TOGG, '0', '1', '2', '3', '', '']
+  - - {t: CTRL, type: trans}
+    - {type: held}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {type: held}
+    - {t: DEL, type: trans}
+combos:
+  - {p: [02, 03], k: "ESC", l: ["BASE"]}
+  - {p: [19, 20], k: "CMD", l: ["BASE"]}

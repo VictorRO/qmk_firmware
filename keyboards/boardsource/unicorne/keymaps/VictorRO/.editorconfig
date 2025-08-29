@@ -1,0 +1,19 @@
+# EditorConfig file
+# =================
+#
+# 1. Set some good common defaults for indent, newlines etc.
+# 2. Enjoy the reduced diffs and less linter errors.
+
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+charset = utf-8
+
+[*.md]
+# Double spaces at the end of a line indicate a forced line break.
+trim_trailing_whitespace = false
