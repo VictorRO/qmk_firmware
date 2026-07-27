@@ -1,37 +1,40 @@
 layout: {qmk_keyboard: boardsource/unicorne, layout_name: LAYOUT_split_3x6_3}
 layers:
-  L0:
+  BASE:
   - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
-  - [LCTL, A, S, D, F, G, H, J, K, L, ES QUOT, ENT]
-  - [ES CCED, Z, X, C, V, B, N, M, ',', ., ES SLSH, ES ACUT]
-  - [LCMD, LA NAV, LSFT, SPC, LA SYM, DEL]
-  L1:
-  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PGDN, PGUP, END, '', '']
-  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', LEFT, DOWN, UP, RGHT, '', '']
+  - [CTRL, A, S, D, F, G, H, J, K, L, '''', ENT]
+  - [Ç, Z, X, C, V, B, N, M, ',', ., /, '´']
+  - [CMD, NAV, SHFT, SPC, SYM, DEL]
+  EXTEND:
+  - ['', '', SW WIN, VOLD, VOLU, MUTE, HOME, PG DN, PG UP, END, '', '']
+  - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', ←, ↓, ↑, →, '', '']
   - ['', '', '', MPRV, MPLY, MNXT, QK REP, '', '', '', SW LANG, '']
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  L2:
-  - ['', '!', ES AT, ES HASH, $, '%', ES DQUO, ES AMPR, ES ASTR, ES UNDS, ES SCLN, ES NOT]
-  - ['', ES GRV, MY TILD, ES LCBR, ES LPRN, ES LBRC, ES COLN, OS SHFT, OS CMD, OS ALT, OS CTRL, ES BULT]
-  - ['', ES LABK, ES RABK, ES RCBR, ES RPRN, ES RBRC, ES PIPE, ES MINS, ES EQL, ES PLUS, ES BSLS, ES NTIL]
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  L3:
-  - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', BRIU]
+  - - {t: CTRL, type: trans}
+    - {type: held}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {t: 'NUM'}
+    - {t: DEL, type: trans}
+  SYMBOLS:
+  - ['', '!', '@', '#', $, '%', ^, '&', '*', _, ;, '']
+  - ['', '`', '~', '{', (, '[', ':', OS SHFT, OS CMD, OS ALT, OS CTRL, '']
+  - ['', <, '>', '}', ), ']', '|', '-', '=', +, \, Ñ]
+  - - {t: CTRL, type: trans}
+    - {t: 'NUM'}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {type: held}
+    - {t: DEL, type: trans}
+  NUMBER:
+  - [QK BOOT, RM VALU, RM HUEU, RM SATU, RM NEXT, RM TOGG, '', '7', '8', '9', '', '']
   - ['', OS CTRL, OS ALT, OS CMD, OS SHFT, '', '', '4', '5', '6', '', '']
-  - [EE CLR, RM VALD, RM HUED, RM SATD, RM PREV, CK TOGG, '0', '1', '2', '3', '', BRID]
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - [EE CLR, RM VALD, RM HUED, RM SATD, RM PREV, CK TOGG, '0', '1', '2', '3', '', '']
+  - - {t: CTRL, type: trans}
+    - {type: held}
+    - {t: SHFT, type: trans}
+    - {t: SPC, type: trans}
+    - {type: held}
+    - {t: DEL, type: trans}
+combos:
+  - {p: [02, 03], k: "ESC", l: ["BASE"]}
+  - {p: [19, 20], k: "CMD", l: ["BASE"]}
